@@ -16,7 +16,9 @@ jobs:
       with:
         java-version: 1.8
     - name: Build Release with Gradle
-      run: ./gradlew assembleRelease
+      run: |
+        chmod +x gradlew
+        ./gradlew assembleRelease
     - name: Push release to release_library branch
       run: |
         git_hash=$(git rev-parse --short "$GITHUB_SHA")
