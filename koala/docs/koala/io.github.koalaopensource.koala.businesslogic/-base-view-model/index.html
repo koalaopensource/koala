@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BaseViewModel - koala</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">koala</a>&nbsp;/&nbsp;<a href="../index.html">io.github.koalaopensource.koala.businesslogic</a>&nbsp;/&nbsp;<a href="./index.html">BaseViewModel</a><br/>
+<br/>
+<h1>BaseViewModel</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BaseViewModel</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewModel</span></code>
+<p>A ViewModel with helper properties and methods.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>A ViewModel with helper properties and methods.</p>
+<code><span class="identifier">BaseViewModel</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="view-model-handler.html">viewModelHandler</a></h4>
+</td>
+<td>
+<p>the handler to be used across this view model scope, whose callbacks
+    and messages are automatically removed on <a href="on-cleared.html">onCleared</a></p>
+<code><span class="keyword">val </span><span class="identifier">viewModelHandler</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/os/Handler.html"><span class="identifier">Handler</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="on-cleared.html">onCleared</a></h4>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCleared</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="remove-all-callbacks-and-messages.html">removeAllCallbacksAndMessages</a></h4>
+</td>
+<td>
+<p>Removes all callbacks and messages of <a href="view-model-handler.html">viewModelHandler</a></p>
+<code><span class="keyword">fun </span><span class="identifier">removeAllCallbacksAndMessages</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

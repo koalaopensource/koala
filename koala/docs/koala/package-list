@@ -1,0 +1,8 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:io.github.koalaopensource.koala.util$getBitmapForVectorDrawable(android.content.Context, kotlin.Int, kotlin.Int, io.github.koalaopensource.koala.util.Measurement)io.github.koalaopensource.koala.util/android.content.-context/get-bitmap-for-vector-drawable.html
+$dokka.location:io.github.koalaopensource.koala.util$toDp(kotlin.Number)io.github.koalaopensource.koala.util/kotlin.-number/to-dp.html
+$dokka.location:io.github.koalaopensource.koala.util$toPx(kotlin.Number)io.github.koalaopensource.koala.util/kotlin.-number/to-px.html
+io.github.koalaopensource.koala.businesslogic
+io.github.koalaopensource.koala.ui
+io.github.koalaopensource.koala.util
