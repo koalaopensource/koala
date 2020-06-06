@@ -24,8 +24,8 @@ android {
     }
 
     dokka {
-        outputFormat = 'html'
-        outputDirectory = "docs"
+        outputFormat = "html"
+        outputDirectory = "../docs"
     }
 
 }
