@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>getBitmapForVectorDrawable - koala</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">koala</a>&nbsp;/&nbsp;<a href="../index.html">io.github.koalaopensource.koala.util</a>&nbsp;/&nbsp;<a href="index.html">android.content.Context</a>&nbsp;/&nbsp;<a href="./get-bitmap-for-vector-drawable.html">getBitmapForVectorDrawable</a><br/>
+<br/>
+<h1>getBitmapForVectorDrawable</h1>
+<a name="io.github.koalaopensource.koala.util$getBitmapForVectorDrawable(android.content.Context, kotlin.Int, kotlin.Int, io.github.koalaopensource.koala.util.Measurement)"></a>
+<code><span class="keyword">fun </span><a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">.</span><span class="identifier">getBitmapForVectorDrawable</span><span class="symbol">(</span><span class="identifier">@DrawableRes</span> <span class="identifier" id="io.github.koalaopensource.koala.util$getBitmapForVectorDrawable(android.content.Context, kotlin.Int, kotlin.Int, io.github.koalaopensource.koala.util.Measurement)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="io.github.koalaopensource.koala.util$getBitmapForVectorDrawable(android.content.Context, kotlin.Int, kotlin.Int, io.github.koalaopensource.koala.util.Measurement)/measurementPx">measurementPx</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;-1<span class="symbol">, </span><span class="identifier" id="io.github.koalaopensource.koala.util$getBitmapForVectorDrawable(android.content.Context, kotlin.Int, kotlin.Int, io.github.koalaopensource.koala.util.Measurement)/measurement">measurement</span><span class="symbol">:</span>&nbsp;<a href="../-measurement/index.html"><span class="identifier">Measurement</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Measurement.HEIGHT<span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a></code>
+<p>Gets the bitmap object of the vector drawable resource scaled to the given measurement.</p>
+<p>If <a href="get-bitmap-for-vector-drawable.html#io.github.koalaopensource.koala.util$getBitmapForVectorDrawable(android.content.Context, kotlin.Int, kotlin.Int, io.github.koalaopensource.koala.util.Measurement)/measurementPx">measurementPx</a> is provided, it is used to scale the vector drawable keeping it
+as width or height depending upon <a href="get-bitmap-for-vector-drawable.html#io.github.koalaopensource.koala.util$getBitmapForVectorDrawable(android.content.Context, kotlin.Int, kotlin.Int, io.github.koalaopensource.koala.util.Measurement)/measurement">measurement</a>.</p>
+<h3>Parameters</h3>
+<p><a name="id"></a>
+<code>id</code> - vector drawable resource to be used use</p>
+<p><a name="measurementPx"></a>
+<code>measurementPx</code> - the size in pixels to scale to</p>
+<p><a name="measurement"></a>
+<code>measurement</code> - the measurement type of <a href="get-bitmap-for-vector-drawable.html#io.github.koalaopensource.koala.util$getBitmapForVectorDrawable(android.content.Context, kotlin.Int, kotlin.Int, io.github.koalaopensource.koala.util.Measurement)/measurementPx">measurementPx</a></p>
+<h3>Exceptions</h3>
+<p><a name="Resources.NotFoundException"></a>
+<code>Resources.NotFoundException</code> - if the given resource does not exist</p>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if the given resource id does not correspond to a vector drawable</p>
+<p><strong>Return</strong><br/>
+bitmap containing the vector drawable</p>
+<p><strong>Receiver</strong><br/>
+<a href="https://developer.android.com/reference/android/content/Context.html">Context</a></p>
+</BODY>
+</HTML>
