@@ -18,4 +18,4 @@ jobs:
       - name: Build Release with Gradle
         run: |
           chmod +x gradlew
-          ./gradlew assembleRelease
+          ./gradlew build --scan -s

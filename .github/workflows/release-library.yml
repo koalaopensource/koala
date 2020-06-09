@@ -18,7 +18,7 @@ jobs:
     - name: Build Release with Gradle
       run: |
         chmod +x gradlew
-        ./gradlew assembleRelease
+        ./gradlew build --scan -s
     - name: Push release to release_library branch
       run: |
         git_hash=$(git rev-parse --short "$GITHUB_SHA")
