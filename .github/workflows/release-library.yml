@@ -28,6 +28,9 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git clone -b release_library --single-branch https://github.com/koalaopensource/koala.git .
         cp ../koala/build/outputs/aar/koala-release.aar koala-release.aar
-        git commit -a -m "Library release for $git_hash"
-        git remote set-url origin "https://koalaopensource:${{ secrets.GITHUB_TOKEN }}@github.com/koalaopensource/koala.git"
-        git push origin release_library
+        if git commit -a -m "Library release for $git_hash";then
+          git remote set-url origin "https://koalaopensource:${{ secrets.GITHUB_TOKEN }}@github.com/koalaopensource/koala.git"
+          git push origin release_library
+        else
+          echo 'No updates to library'
+        fi
