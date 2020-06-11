@@ -14,29 +14,26 @@ import androidx.recyclerview.widget.RecyclerView
  *
  * @param[T] the type of each item in the item array
  * @param[itemLayoutRes] the layout resource of the view corresponding to each item
- * @param[bindView] this method is called when [onBindViewHolder] is called, and is used to populate the view according to the item's data
+ * @param[bindView] this method is called when [onBindViewHolder] is called, and is used to populate
+ * the view according to the item's data
  */
 class SimpleDisplayAdapter<T>(
-	@LayoutRes private val itemLayoutRes: Int,
-	private val itemArrayList: ArrayList<T>,
-	private val bindView: ((View, T) -> Unit)
+    @LayoutRes private val itemLayoutRes: Int,
+    private val itemArrayList: ArrayList<T>,
+    private val bindView: ((View, T) -> Unit)
 ) : RecyclerView.Adapter<SimpleDisplayAdapter<T>.SimpleDisplayViewHolder>() {
 
-	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleDisplayViewHolder {
-		return SimpleDisplayViewHolder(
-			LayoutInflater.from(parent.context)
-				.inflate(itemLayoutRes, parent, false)
-		)
-	}
+  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleDisplayViewHolder {
+    return SimpleDisplayViewHolder(
+        LayoutInflater.from(parent.context).inflate(itemLayoutRes, parent, false))
+  }
 
-	override fun getItemCount() = itemArrayList.size
+  override fun getItemCount() = itemArrayList.size
 
-	override fun onBindViewHolder(holder: SimpleDisplayViewHolder, position: Int) {
-		bindView(holder.itemView, itemArrayList[position])
-	}
+  override fun onBindViewHolder(holder: SimpleDisplayViewHolder, position: Int) {
+    bindView(holder.itemView, itemArrayList[position])
+  }
 
-	/**
-	 * A view holder that just... holds the view
-	 */
-	inner class SimpleDisplayViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+  /** A view holder that just... holds the view */
+  inner class SimpleDisplayViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }

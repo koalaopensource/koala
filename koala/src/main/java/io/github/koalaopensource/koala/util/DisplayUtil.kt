@@ -4,11 +4,8 @@ import android.content.res.Resources
 import android.util.TypedValue
 import kotlin.math.roundToInt
 
-private val pxInOneDp = TypedValue.applyDimension(
-	TypedValue.COMPLEX_UNIT_DIP,
-	1f,
-	Resources.getSystem().displayMetrics
-)
+private val pxInOneDp =
+    TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1f, Resources.getSystem().displayMetrics)
 
 /**
  * Converts a number from DP to pixel dimension.
@@ -18,7 +15,7 @@ private val pxInOneDp = TypedValue.applyDimension(
  * @receiver [Number]
  */
 fun Number.toPx(): Int {
-	return (this.toDouble() * pxInOneDp).roundToInt()
+  return (this.toDouble() * pxInOneDp).roundToInt()
 }
 
 /**
@@ -29,5 +26,5 @@ fun Number.toPx(): Int {
  * @receiver [Number]
  */
 fun Number.toDp(): Int {
-	return (this.toDouble() / pxInOneDp).roundToInt()
+  return (this.toDouble() / pxInOneDp).roundToInt()
 }
