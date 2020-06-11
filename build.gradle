@@ -22,6 +22,7 @@ buildscript {
 
 plugins {
     id "com.gradle.build-scan" version "3.3.4"
+    id "com.diffplug.gradle.spotless" version "4.3.0"
 }
 
 gradleEnterprise {
@@ -43,6 +44,11 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+spotless {
+    kotlin {
+        ktfmt()
+        target "**/*.kt"
+    }
 }
+
+tasks.build.dependsOn(tasks.spotlessApply)
